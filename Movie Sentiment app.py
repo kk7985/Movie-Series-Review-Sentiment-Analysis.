@@ -10,8 +10,8 @@ import streamlit as st
 import pickle
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-tfidf=pickle.load(open('/content/drive/MyDrive/Colab Notebooks/tfidf.pkl','rb'))
-model=pickle.load(open('/content/drive/MyDrive/Colab Notebooks/lr.pkl','rb'))
+tfidf=pickle.load(open('model/tfidf.pkl','rb'))
+model=pickle.load(open('model/lr.pkl','rb'))
 
 st.title("Movie Review Sentiment Analysis")
 user_input=st.text_area("Enter your review here:")
