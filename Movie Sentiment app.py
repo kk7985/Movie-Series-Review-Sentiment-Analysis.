@@ -36,6 +36,7 @@ else:
 
 st.info(f"Rule-based Sentiment: {rule_sentiment}")
 
-confidence =max(model.decision_function(input_vec)[0])
-st.write(f"Confidence: {confidence:.2f}")
+score = model.decision_function(input_vec)[0]
+confidence = abs(score)
+st.write(f"Confidence score: {confidence:.2f}")
 
